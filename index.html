@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .contador {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: rgba(255, 0, 0, 0.562);
+
+            width: 200px;
+            height: 200px;
+
+            border-radius: 10px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.349);
+
+        }
+
+        .botao {
+            width: 50px;
+            height: 50px;
+
+            margin-left: 32px;
+
+            border: none;
+            border-radius: 10px;
+
+            font-size: 35px;
+            color: rgba(255, 0, 0, 0.562);
+            
+            cursor: pointer;
+
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.349);
+        }
+
+        #valor {
+            text-align: center;
+
+            margin: 27px;
+
+            font-size: 60px;
+
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="fundo">
+        <div class="contador">            
+            <p id="valor">0</p>
+            <button class="botao" onclick="subtrair()"> - </button>
+            <button class="botao" onclick="adicionar()"> + </button>
+        </div>
+    </div>
+
+    <script>
+
+        var cont = 0
+        
+        function adicionar() {
+            document.getElementById("valor").innerHTML = cont += 1
+        }
+
+        function subtrair() {
+            document.getElementById("valor").innerHTML = cont -= 1
+        }
+    </script>
+
+</body>
+</html>
