@@ -12,6 +12,11 @@
             padding: 0px;
         }
 
+        .fundo {
+            background-color: gainsboro;
+            height: 100vh;
+        }
+
         .contador {
             position: absolute;
             top: 50%;
@@ -73,6 +78,7 @@
     <script>
 
         var cont = 0
+        var reset = 0
         
         function adicionar() {
             document.getElementById("valor").innerHTML = cont += 1
@@ -81,7 +87,11 @@
         function subtrair() {
             document.getElementById("valor").innerHTML = cont -= 1
         }
-        
+
+        function resetar() {
+            document.getElementById("valor").innerHTML = reset
+        }
+
     </script>
 
 </body>
